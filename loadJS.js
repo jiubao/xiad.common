@@ -1,4 +1,4 @@
-loadJS: function() {
+XIAD.loadJS: function() {
 	function load() {
 		if (urls.length == 0) {
 			callback && callback();
@@ -40,5 +40,5 @@ loadJS: function() {
 }
 
 window.onload = function () {
-    loadJS('//code.jquery.com/jquery-1.11.0.min.js','/javascripts/app/desktop.min.js', XIAD.startUp);
+    XIAD.loadJS('//code.jquery.com/jquery-1.11.0.min.js','/javascripts/app/desktop.min.js', XIAD.startUp);
 }
