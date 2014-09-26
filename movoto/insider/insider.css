@@ -1,0 +1,306 @@
+body {font-size: 12px;} /*browser default is 16px, while movoto set body as 12px*/
+.clearfix { zoom: 1; }
+.clearfix:after { content: "\20"; clear: both; height: 0; display: block; }
+
+.insider * {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial;
+}
+
+.insider {
+    font-size: 83.33%; /*adapt with the body font size 12px, make insider default font size as 10px.*/
+}
+
+.insider .contentContainer {
+	margin: 0 auto; width: 1200px;
+}
+
+.insider a:hover {
+	text-decoration: none; cursor: pointer;
+}
+
+.insider h1 {
+  font-size: 430%; line-height: 1; text-align: center; margin-bottom: 4px; margin-top: 15px;
+}
+
+.insider h2 {
+  font: lighter 300%/1.17 Light Roboto; font-weight: 300; text-align: center; margin-bottom: 12px;
+}
+
+.insider h3 {
+	font-size: 180%; line-height: 1; margin-bottom: 13px; color: #555;
+}
+
+.insider h4 {
+	font-size: 180%; color: #555; font-weight: lighter;
+}
+
+.insider h4 a {
+	font-weight: bold;
+}
+
+.insider h6 {
+	color: #fff;
+	padding: 4px 10px 4px 14px;
+	border-radius: 0 5px 5px 0;
+	background-color: #abc644;
+	font-size: 100%;
+	line-height: 1;
+	font-weight: normal;
+    position: absolute;
+    top: -18px;
+    text-transform: uppercase;
+}
+
+.insider .hot, .insider .best {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+    display:inline-block;
+    width:42px;
+    height:42px;
+}
+
+.insider .hot {
+    background:url(../images/insider/hot.png) no-repeat;
+}
+
+.insider .best {
+    background:url(../images/insider/best.png) no-repeat;
+}
+
+.insider .present {
+	position: relative; margin-bottom: 32px;
+}
+
+.insider .sider h4 {
+	padding-top: 15px; padding-bottom: 13px;
+}
+
+.insider .present .info {
+	margin-top: 8px;
+}
+
+.insider .interest a {
+	display: block; float: right; width: 49.5%;
+    width: 593px; height: 309px;
+	background: #aaa;
+    position: relative;
+}
+
+.insider .interest a:first-child {
+	float: left;
+}
+
+.insider .interest a img {
+    position: absolute; width: 100%; height: 100%;
+}
+
+.insider .summary {
+    position:absolute;
+}
+
+.insider .interest .summary {
+	min-height: 80px; max-height: 60%; width: 67.46%; left: 9px; bottom: 11px;
+}
+
+.insider .sider .summary {
+	left: 0; bottom: 0;
+}
+
+.insider .summary div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.74;
+    filter: alpha(opacity=74);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=74)";
+    content: "\20";
+}
+
+.insider .summary p {
+    position: relative; color: #fff; font-size: 240%; z-index: 2;
+}
+
+.insider .interest .summary p {
+	padding: 17px 12px;
+}
+
+.insider .sider .summary p {
+	padding: 6px 12px;
+}
+
+
+.insider .sider {
+    float: left; width: 400px;
+}
+
+.insider .sider .present a:first-child {
+	display: block;
+	height: 0;
+	padding-bottom: 51.25%;
+	position: relative;
+}
+.insider .sider a img {
+	width: 100%; height: 100%; position: absolute;
+}
+
+.insider .main {
+    float: right; width: 700px;
+}
+
+.insider .main .content img {
+	display: block;
+	float: left;
+	margin-right: 15px;
+	width: 187px;
+	height: 98px;
+}
+
+.insider .main a {
+	font-size: 180%; line-height: 1; font-weight: bold; margin-bottom: 12px; display: block;
+}
+
+.insider .main p {
+	font-size: 140%; font-weight: bold; margin-bottom: 15px;
+}
+
+.insider .sider, .insider .main {
+    margin-top: 34px; margin-bottom: 20px;
+}
+
+.insider .info {
+	font-size: 130%; font-weight: normal; float: left; color: #777;
+}
+
+.insider .widget {
+	float: right;
+}
+.insider .widget span {
+	display: inline-block;
+	height: 19px;
+	vertical-align: top; font-size: 13px;
+	padding-left: 6px;
+	width: 50px;
+}
+
+.insider .widget .comments ,.insider .widget .views {
+	width: 19px; height: 19px; display: inline-block;
+}
+
+.insider .widget .comments {
+    background:url(../images/insider/comment.png) no-repeat;
+}
+
+.insider .widget .views {
+    background:url(../images/insider/view.png) no-repeat;
+}
+
+.insider .main .content, .insider .main .advertise {
+	padding-top: 18px; margin-top: 18px; border-top: solid 1px #d4d4d4;
+}
+
+.insider .main .content:first-child {
+	padding-top: 0; margin-top: 0; border: 0;
+}	
+
+.insider .main .advertise img {
+	width: 100%;
+}
+
+.insider a.descrip {
+	font-size: 240%; font-weight: 700; display: block; margin-top: 10px;
+}
+
+.shortFigureHeader .headerField {
+	width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .insider .contentContainer {
+	    width: 96%;
+    }
+
+    .insider .interest a {
+        width: 49.5%; height: 0; padding-bottom: 25.8%;
+    }
+
+    .insider .sider {
+        width: 33.33%;
+    }
+
+    .insider .main {
+        width: 58.33%
+    }
+
+	.shortFigureHeader .headerField {
+		width: 96%;
+	}
+	.shortFigureHeader .backgroundDiv {
+		min-width: inherit;
+	}
+	.ex-contentsContainer {
+		min-width: inherit;
+	}
+	.ex-contentsLayout {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#menuBar {
+		margin-right:0; padding: 0;
+	}
+
+	.headerField:after {
+		content: "\20"; clear: both; height: 0; display: block;
+	}
+
+	.shortFigureHeader .backgroundDiv {
+		height: 100%;
+	}
+
+	#FigureHeader {
+		position: relative !important; height: inherit;
+	}
+
+	#headerSearchBox {
+		position: relative; float: left; left: 0; margin-left: 60px;
+	}
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
+	#ex-contents {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.insider .interest a {
+		width: 100%; padding-bottom: 52.1%;
+	}
+	.insider .interest a:first-child {
+		margin-bottom: 10px;
+	}
+	.insider .sider {
+		width: 100%;
+	}
+	.insider .main {
+		width: 100%;
+	}
+	#ex-contents {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 464px) {
+	.insider .summary p {
+		font-size: 150%;
+	}
+	#headerSearchBox {
+		margin-left:0; width: 100% !important;
+	}
+}
