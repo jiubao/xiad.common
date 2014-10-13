@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<div title="div1"></div>
+		<p title="p1"></p>
+		<h2 title="h2"></h2>
+		<span title="h2"></span>
+
+		<script type="text/javascript" src="lib.js"></script>
+		<script type="text/javascript">
+
+			console.log((-10 / 3).integer()); // -3
+			console.log("   neat   ".trim());
+			var r = getElementsByAttribute('title', 'h2');
+
+			var foo = function ( ) {
+				var a = 3, b = 5;
+				var bar = function ( ) {
+					var b = 7, c = 11;
+					// At this point, a is 3, b is 7, and c is 11
+					a += b + c;
+					// At this point, a is 21, b is 7, and c is 11
+				};
+				// At this point, a is 3, b is 5, and c is not defined
+				bar( );
+				// At this point, a is 21, b is 5
+			};
+
+
+			fade(document.body);
+
+			var fade2 = function(node) {
+				1;
+			}
+
+		</script>
+	</body>
+</html>
