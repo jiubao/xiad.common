@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+	123
+	<script type="text/javascript">
+		function f1 () {
+			console.log(this === window);
+		}
+
+		var o1 = {
+			id: 2,
+			name: 'xiad',
+			eat: function() {
+				console.log('eating...');
+				console.log(this === o1);
+			}
+		}
+
+		f1();
+
+		o1.eat();
+
+		try {
+			foo++;
+			console.log(foo);
+		} catch(e) {
+			console.log(e);
+		}
+
+		try {
+			// assume an exception occurs
+			foo++;
+			console.log(foo);
+		} catch (exception) {
+			if (exception instanceof TypeError) {
+				// Handle TypeError exceptions
+				console.log('handling type error...');
+			} else if (exception instanceof ReferenceError) {
+				// Handle ReferenceError exceptions
+				console.log('handling reference error...');
+			} else {
+				// Handle all other types of exceptions
+				console.log('handling other error...');
+			}
+		} finally {
+			console.log('finally...');
+		}
+	</script>
+</body>
+</html>

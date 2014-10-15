@@ -1,15 +1,51 @@
+Object.create = function(o) {
+	var f = function() {};
+	f.prototype = o;
+	return new f();
+}
+
 Function.prototype.method = function(name, func) {
 	//if (!this.prototype[name]) //add this line to add a method only if the method is known to be missing
 	this.prototype[name] = func;
-	//return this;
+	return this;
 }
+
+Object.method('superior', function (name) {
+	var that = this,
+	method = that[name];
+	return function () {
+		return method.apply(that, arguments);
+	};
+});
 
 Number.method('integer', function() {
 	return Math[this < 0 ? 'ceil' : 'floor'](this);
 });
 
+
 String.method('trim', function() {
 	return this.replace(/^\s+|\s+$/g, '');
+});
+
+// Function.method('curry', function () {
+// 	var args = arguments, that = this;
+// 	return function () {
+// 		return that.apply(null, args.concat(arguments));
+// 	};
+// }); // Something isn't right...
+
+Function.method('curry', function ( ) {
+	var slice = Array.prototype.slice,
+	args = slice.apply(arguments),
+	that = this;
+	return function ( ) {
+		return that.apply(null, args.concat(slice.apply(arguments)));
+	};
+});
+
+Function.method('inherits', function (Parent) {
+	this.prototype = new Parent();
+	return this;
 });
 
 // Define a walk_the_DOM function that visits every
@@ -58,22 +94,5 @@ var fade = function (node) {
 	setTimeout(step, 100);
 };
 
-
-// Function.method('curry', function () {
-// 	var args = arguments, that = this;
-// 	return function () {
-// 		return that.apply(null, args.concat(arguments));
-// 	};
-// }); // Something isn't right...
-
-Function.method('curry', function ( ) {
-	var slice = Array.prototype.slice,
-	args = slice.apply(arguments),
-	that = this;
-	return function ( ) {
-		return that.apply(null, args.concat(slice.apply(arguments)));
-	};
-});
-
-var add1 = add.curry(1);
-console.log(add1(6)); // 7
+//var add1 = add.curry(1);
+//console.log(add1(6)); // 7

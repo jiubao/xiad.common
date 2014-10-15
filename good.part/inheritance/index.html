@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<a href="javascript:;">classical</a>
+		<a href="javascript:;">classical advance</a>
+		<a href="javascript:;">functional</a>
+
+		<script type="text/javascript" src="../lib.js"></script>
+		<script type="text/javascript" src="classical.js"></script>
+		<script type="text/javascript" src="classical.adv.js"></script>
+		<script type="text/javascript" src="functional.js"></script>
+		<script type="text/javascript">
+
+			function test_classical() {
+				var myMammal = new Mammal('Herb the Mammal');
+				var name1 = myMammal.get_name();
+				console.log(name1);
+
+				var myCat = new Cat('Henrietta');
+				var says = myCat.says(); // 'meow'
+				var purr = myCat.purr(5); // 'r-r-r-r-r'
+				var name2 = myCat.get_name();
+				console.log(says);
+				console.log(purr);
+				console.log(name2);
+			}
+
+			function test_classical_adv() {
+
+				var myMammal = new Mammal('Herb the Mammal');
+				var name1 = myMammal.get_name();
+				console.log(name1);
+
+				var myCat = new CatAdv('Henrietta');
+				var says = myCat.says(); // 'meow'
+				var purr = myCat.purr(5); // 'r-r-r-r-r'
+				var name2 = myCat.get_name();
+				console.log(says);
+				console.log(purr);
+				console.log(name2);
+			}
+
+			test_classical_adv();
+
+		</script>
+	</body>
+</html>
